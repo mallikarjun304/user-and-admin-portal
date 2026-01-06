@@ -1,5 +1,5 @@
 async function userData() {
-    let res = await fetch("http://localhost:3000/data")
+    let res = await fetch("https://student-json-backend.onrender.com/data")
     try {
         if (!res.ok) {
             throw new Error("Something went wrong");
