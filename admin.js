@@ -51,7 +51,7 @@ function showData(data) {
 
 //DELETE
 async function delData(id) {
-   let res=await fetch(`http://localhost:3000/data/${id}`,{"method":"DELETE"})
+   let res=await fetch(`https://student-json-backend.onrender.com/data/${id}`,{"method":"DELETE"})
    try {
     if(!res.ok){
         throw new Error("Data not deleted");
@@ -72,7 +72,7 @@ async function saveData(){
     }
 
     let stmethod=studentId?"PUT":"POST"
-    let URL=studentId?`http://localhost:3000/data/${studentId}`:"http://localhost:3000/data"
+    let URL=studentId?`https://student-json-backend.onrender.com/data/${studentId}`:"https://student-json-backend.onrender.com/data"
    
     let res=await fetch(URL,{
     "method":stmethod,
@@ -99,7 +99,7 @@ async function editData(id){
     let name=document.getElementById("name")
     let image=document.getElementById("image")
 
-    let res=await fetch(`http://localhost:3000/data/${id}`)
+    let res=await fetch(`https://student-json-backend.onrender.com/data/${id}`)
    let data=await res.json();
    studentId.value=data.id
    name.value=data.name;
@@ -112,10 +112,3 @@ document.addEventListener("DOMContentLoaded", fetchData)
 
 
 
-/**
- * ler arr=["html","css","js"]
- * let newarr=arr.map(res=>console.log(res))
- * 
- * 
- * 
- */
