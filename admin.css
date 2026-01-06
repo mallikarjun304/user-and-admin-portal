@@ -1,0 +1,160 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+h1 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+input[type="text"] {
+    width: 320px;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* =========================
+   SAVE BUTTON
+========================= */
+button {
+    width: 320px;
+    padding: 12px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    border: none;
+    background: #ff9800;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #e68900;
+    transform: scale(1.04);
+}
+
+/* =========================
+   PARENT CONTAINER
+========================= */
+#container {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* =========================
+   ADMIN CARD (DYNAMIC)
+========================= */
+#container > div {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+    padding: 18px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#container > div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   HEADINGS
+========================= */
+#container > div h3 {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+/* =========================
+   BUTTON GROUP
+========================= */
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+/* =========================
+   CARD BUTTONS (COMMON)
+========================= */
+.button-group button {
+    flex: 1;
+    padding: 10px 0;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease;
+}
+
+/* =========================
+   DELETE BUTTON
+========================= */
+.delete-btn {
+    background: #ff9800;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #e68900;
+}
+
+/* =========================
+   EDIT BUTTON
+========================= */
+.edit-btn {
+    background: #ff9800;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #e68900;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 480px) {
+    input[type="text"],
+    button {
+        width: 100%;
+    }
+}
